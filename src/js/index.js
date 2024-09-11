@@ -1,102 +1,82 @@
-let resposta;
 let tituloQuestao = document.getElementById("tituloQuestao");
 let buttonRespostaA = document.getElementById("buttonRespA");
 let buttonRespostaB = document.getElementById("buttonRespB");
 let buttonRespostaC = document.getElementById("buttonRespC");
-
+let questoesJaRespondidas = [];
+let respostaCorreta;
 let contadorRespostasCorretas = 0;
 let contadorRespostasIncorretas = 0;
 
+const arrayQuestoes = [
+  {
+    titulo: "Quem descobriu o Brasil?",
+    resposta: ["Pedro Alvares Cabral", "Shaolin Matador de porco", "Meu pai"],
+    correta: "A",
+  },
+  {
+    titulo: "Qual é a fórmula da água?",
+    resposta: ["H2O", "CO2", "O2"],
+    correta: "A",
+  },
+  {
+    titulo: "Qual é o maior planeta do sistema solar?",
+    resposta: ["Terra", "Júpiter", "Marte"],
+    correta: "B",
+  },
+];
+
 function randomizar() {
+  let numeroQuestao;
+  do {
+    numeroQuestao = Math.floor(Math.random() * arrayQuestoes.length); // Escolher um número aleatório dentro do comprimento do array
+  } while (questoesJaRespondidas.includes(numeroQuestao)); // Garantir que a pergunta não foi respondida
 
-    let numeroQuestao = Math.floor(Math.random() * 10) + 1; //Escolher um número aleatório de 1 a 10
+  questoesJaRespondidas.push(numeroQuestao); // Adicionar a questão à lista de já respondidas
 
-    let respostaQuestao = Math.floor(Math.random() * 3) + 1;
+  let questao = arrayQuestoes[numeroQuestao]; // Escolher a questão aleatoriamente
 
+  tituloQuestao.innerHTML = questao.titulo; // Título da questão no HTML
+  buttonRespostaA.innerHTML = questao.resposta[0]; // Alternativa 1 no HTML
+  buttonRespostaB.innerHTML = questao.resposta[1]; // Alternativa 2 no HTML
+  buttonRespostaC.innerHTML = questao.resposta[2]; // Alternativa 3 no HTML
 
-    switch (numeroQuestao) {
-        case 1:
-            // Questão 1
-            tituloQuestao.innerHTML = "Texto da Questão 1";
-            buttonRespostaA.innerHTML = "Resposta A1";
-            buttonRespostaB.innerHTML = "Resposta B1";
-            buttonRespostaC.innerHTML = "Resposta C1";
-            resposta = "A"; // Resposta correta para Questão 1
-            break;
-        case 2:
-            // Questão 2
-            tituloQuestao.innerHTML = "Texto da Questão 2";
-            buttonRespostaA.innerHTML = "Resposta A2";
-            buttonRespostaB.innerHTML = "Resposta B2";
-            buttonRespostaC.innerHTML = "Resposta C2";
-            resposta = "B"; // Resposta correta para Questão 2
-            break;
-        case 3:
-            // Questão 3
-            tituloQuestao.innerHTML = "Texto da Questão 3";
-            buttonRespostaA.innerHTML = "Resposta A3";
-            buttonRespostaB.innerHTML = "Resposta B3";
-            buttonRespostaC.innerHTML = "Resposta C3";
-            resposta = "C"; // Resposta correta para Questão 3
-            break;
-        case 4:
-            // Questão 4
-            tituloQuestao.innerHTML = "Texto da Questão 4";
-            buttonRespostaA.innerHTML = "Resposta A4";
-            buttonRespostaB.innerHTML = "Resposta B4";
-            buttonRespostaC.innerHTML = "Resposta C4";
-            resposta = "A"; // Resposta correta para Questão 4
-            break;
-        case 5:
-            // Questão 5
-            tituloQuestao.innerHTML = "Texto da Questão 5";
-            buttonRespostaA.innerHTML = "Resposta A5";
-            buttonRespostaB.innerHTML = "Resposta B5";
-            buttonRespostaC.innerHTML = "Resposta C5";
-            resposta = "B"; // Resposta correta para Questão 5
-            break;
-        case 6:
-            // Questão 6
-            tituloQuestao.innerHTML = "Texto da Questão 6";
-            buttonRespostaA.innerHTML = "Resposta A6";
-            buttonRespostaB.innerHTML = "Resposta B6";
-            buttonRespostaC.innerHTML = "Resposta C6";
-            resposta = "C"; // Resposta correta para Questão 6
-            break;
-        case 7:
-            // Questão 7
-            tituloQuestao.innerHTML = "Texto da Questão 7";
-            buttonRespostaA.innerHTML = "Resposta A7";
-            buttonRespostaB.innerHTML = "Resposta B7";
-            buttonRespostaC.innerHTML = "Resposta C7";
-            resposta = "A"; // Resposta correta para Questão 7
-            break;
-        case 8:
-            // Questão 8
-            tituloQuestao.innerHTML = "Texto da Questão 8";
-            buttonRespostaA.innerHTML = "Resposta A8";
-            buttonRespostaB.innerHTML = "Resposta B8";
-            buttonRespostaC.innerHTML = "Resposta C8";
-            resposta = "B"; // Resposta correta para Questão 8
-            break;
-        case 9:
-            // Questão 9
-            tituloQuestao.innerHTML = "Texto da Questão 9";
-            buttonRespostaA.innerHTML = "Resposta A9";
-            buttonRespostaB.innerHTML = "Resposta B9";
-            buttonRespostaC.innerHTML = "Resposta C9";
-            resposta = "C"; // Resposta correta para Questão 9
-            break;
-        case 10:
-            // Questão 10
-            tituloQuestao.innerHTML = "Texto da Questão 10";
-            buttonRespostaA.innerHTML = "Resposta A10";
-            buttonRespostaB.innerHTML = "Resposta B10";
-            buttonRespostaC.innerHTML = "Resposta C10";
-            resposta = "A"; // Resposta correta para Questão 10
-            break;
-    }
-
+  respostaCorreta = questao.correta; // Resposta da questão
 }
 
+function verificarResposta(respostaEscolhida) {
+  if (respostaEscolhida === respostaCorreta) {
+    contadorRespostasCorretas++; //Soma +1  pontos positivos na pontuação do usuário
+    alert("Resposta correta!");
+  } else {
+    contadorRespostasIncorretas++; //Soma +1 pontos negativos na pontuação do usuário
+    alert("Resposta incorreta!");
+  }
+  randomizar(); // Carregar uma nova questão após a resposta
+}
+
+buttonRespostaA.onclick = function () {
+  verificarResposta("A");
+};
+
+buttonRespostaB.onclick = function () {
+  verificarResposta("B");
+};
+
+buttonRespostaC.onclick = function () {
+  verificarResposta("C");
+};
+
+// Inicializar com uma questão
 randomizar();
+
+/*
+Necessária uma função para parar o programa quando uma quantidade X de pontoso positivos sejam alcançados, e o mesmo para caso seja pontos negativos.
+
+Gostaria de uma função para randomizar a posição da resposta correta entre os botões.
+
+Sinto que deveriamos ter ao menos 10 questões no minimo
+
+Uma página para caso de vitória, e uma para derrota.
+
+E um button com a função de reiniciar o programa caso o usuário queira
+*/
