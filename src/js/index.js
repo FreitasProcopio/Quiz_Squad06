@@ -26,7 +26,14 @@ const arrayQuestoes = [
 ];
 
 function randomizar() {
+
+  if (questoesJaRespondidas.length === arrayQuestoes.length) {//Caso o usuário já tenha respondidos todas as questões do quiz
+    questoesJaRespondidas = [];//Reseta o questoesJaRespondidas para nenhuma, assim retornando as questões (Espero que não seja necessário, mas estou me protegendo desse problema 🤔). 
+    alert("Você finalizou todas as questões do quiz! Parabéns!");//Ninguém vai ver essa mensagem kkkkkkk
+  }
+
   let numeroQuestao;
+
   do {
     numeroQuestao = Math.floor(Math.random() * arrayQuestoes.length); // Escolher um número aleatório dentro do comprimento do array
   } while (questoesJaRespondidas.includes(numeroQuestao)); // Garantir que a pergunta não foi respondida
