@@ -1,0 +1,65 @@
+body{
+    background-color: var(--vermelho);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    border: solid 6px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-home{
+    width: 100%;
+    height: 60%;
+    background-color: var(--azul);
+    border-top: solid 6px black;
+    border-bottom: solid 6px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.container-home > h1{
+    color: white;
+    font-size: 60px;
+}
+
+/* Consertar a medida do botão */
+button{
+    width: 20dvw;
+    height: 10dvh;
+    background-color: var(--amarelo);
+    border: solid 4px black;
+}
+
+button:hover{
+    transform:scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 4px 4px 0px 4px black;
+    cursor: pointer;
+}
+
+.link{
+    color: black;
+}
+/* Trabalhar melhor a responsividade */
+
+@media (max-width: 768px){
+    .container-home{
+        height: 80%;
+    }
+}
+
+  

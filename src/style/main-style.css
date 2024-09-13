@@ -1,0 +1,97 @@
+body{
+    background-color: var(--verde);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    border: solid 6px black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.cronometro{
+    width: 100%;
+    height: 10px;
+    background-color: var(--azul);
+}
+
+.marcadores{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personagem{
+    width: 100px;
+    height: 100%;
+    background-color: none;
+}
+
+.personagem > img{
+    width: 100%;
+    height: 100%;
+    border-right: solid 6px black;
+    border-bottom: solid 6px black;
+}
+
+.pontuacao{
+    width: auto;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numero-questao{
+    width: 80px;
+    height: 100%;
+    background-color: var(--vermelho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-questao{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px 20px 0px 20px;
+}
+
+.container-questao> h1{
+    text-align: center;
+    font-size: 35px;
+}
+
+.botaoResposta{
+    width: 700px;
+    height: 70px;
+    background-color: var(--amarelo);
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+ul{
+    padding-top: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 4px 4px 0px 4px black;
+}
+
+

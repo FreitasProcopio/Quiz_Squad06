@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none; 
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  :root{
+    --vermelho: #f90423;
+    --azul: #01aaec;
+    --amarelo: #ffcd0f;
+    --dourado: #c49c0c;
+    --verde: #43b047;
+  }
+
+  @media (max-width: 768px){
+    .container{
+        width: 90%;
+        height: 80%;
+    }
+}
+

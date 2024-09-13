@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=bu, initial-scale=1.0">
-    <title>Quiz Grupo 6</title>
+    <!-- Adicionando css -->
+    <link rel="stylesheet" href="../src/style/main-style.css">
+    <link rel="stylesheet" href="../src/style/style.css">
+    <title>QUIZ</title>
 </head>
 <body onload = "randomizarQuestao()">
-    <h1 id="tituloQuestao"></h1>
-    <button id="buttonRespA" class="botaoResposta">Resposta A</button>
-    <button id="buttonRespB" class="botaoResposta">Resposta B</button>
-    <button id="buttonRespC" class="botaoResposta">Resposta C</button>
+    <div class="container">
+        <div class="marcadores">
+            <div class="personagem">
+                <img src="https://i.imgflip.com/41xeas.jpg" alt="Personagem">
+            </div>
+            <div class="pontuacao">
+                <h1>Pontuação:<span class="pontos"></span></h1>
+            </div>
+            <div class="numero-questao">
+                <h1 class="questoes">1/6</h1>
+            </div>
+        </div>
+        <div class="cronometro">
+            <span id="timer" ></span>
+        </div>
+        <div class="container-questao">
+            <h1 id="tituloQuestao"></h1>
+            <ul>
+                <li><button id="buttonRespA" class="botaoResposta">Resposta A</button></li>
+                <li><button id="buttonRespB" class="botaoResposta">Resposta B</button></li>
+                <li><button id="buttonRespC" class="botaoResposta">Resposta C</button> </li>
+            </ul>
+        </div>
+    </div>
     <script src="/src/js/index.js"></script>
 </body>
 </html>
