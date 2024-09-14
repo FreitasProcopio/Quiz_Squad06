@@ -5,6 +5,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 1s;
 }
 
 .container{
@@ -16,6 +17,7 @@ body{
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+
 }
 
 .cronometro{
