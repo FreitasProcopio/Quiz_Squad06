@@ -1,11 +1,16 @@
 let tituloQuestao = document.getElementById("tituloQuestao");
 let buttonRespostaA = document.getElementById("buttonRespA");
-let buttonRespostaB = document.getElementById("buttonRespB");
 let buttonRespostaC = document.getElementById("buttonRespC");
+let buttonRespostaB = document.getElementById("buttonRespB");
+let pontos = document.getElementById("pontos");
 let questoesJaRespondidas = [];
 let respostaCorreta;
 let contadorRespostasCorretas = 0;
-let contadorRespostasIncorretas = 0;
+let contadorPerguntasRespondidas = document.getElementById("contadorPerguntasRespondidas");
+let contadorMaximoDePerguntas = document.getElementById("contadorMaximoDePerguntas");
+
+
+
 
 const arrayQuestoes = [
   {
@@ -23,7 +28,63 @@ const arrayQuestoes = [
     resposta: ["Terra", "Júpiter", "Marte"],
     correta: "B",
   },
+  {
+    titulo: "Qual é a capital da França?",
+    resposta: ["Paris", "Londres", "Berlim"],
+    correta: "A",
+  },
+  {
+    titulo: "Quem escreveu 'Dom Quixote'?",
+    resposta: [
+      "Miguel de Cervantes",
+      "William Shakespeare",
+      "Jorge Luis Borges",
+    ],
+    correta: "A",
+  },
+  {
+    titulo: "Qual é o elemento químico com o símbolo 'Au'?",
+    resposta: ["Ouro", "Prata", "Cobre"],
+    correta: "A",
+  },
+  {
+    titulo: "Em que ano foi lançada a primeira versão do Windows?",
+    resposta: ["1985", "1990", "1995"],
+    correta: "A",
+  },
+  {
+    titulo: "Qual é o maior oceano do planeta Terra?",
+    resposta: ["Oceano Atlântico", "Oceano Índico", "Oceano Pacífico"],
+    correta: "C",
+  },
+  {
+    titulo: "Quem pintou a Mona Lisa?",
+    resposta: ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso"],
+    correta: "A",
+  },
+  {
+    titulo: "Qual é o planeta mais próximo do Sol?",
+    resposta: ["Mercúrio", "Vênus", "Marte"],
+    correta: "A",
+  },
+  {
+    titulo: "Qual é o esporte mais popular do mundo?",
+    resposta: ["Futebol", "Basquete", "Tênis"],
+    correta: "A",
+  },
+  {
+    titulo: "Qual é o maior continente em área?",
+    resposta: ["Ásia", "África", "América do Norte"],
+    correta: "A",
+  },
+  {
+    titulo: "Quem foi o primeiro homem a pisar na Lua?",
+    resposta: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin"],
+    correta: "A",
+  },
 ];
+
+contadorMaximoDePerguntas.innerHTML = (`/${arrayQuestoes.length}`);
 
 function randomizar() {
 
@@ -52,13 +113,15 @@ function randomizar() {
 
 function verificarResposta(respostaEscolhida) {
   if (respostaEscolhida === respostaCorreta) {
-    contadorRespostasCorretas++; //Soma +1  pontos positivos na pontuação do usuário
     alert("Resposta correta!");
+    pontos.innerHTML = parseInt(pontos.innerHTML)+1; //Soma +1  pontos positivos na pontuação do usuário
+    contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML)+1;
+    randomizar(); // Carregar uma nova questão após a resposta
   } else {
-    contadorRespostasIncorretas++; //Soma +1 pontos negativos na pontuação do usuário
     alert("Resposta incorreta!");
+    window.location.href = "./highscore.html";
   }
-  randomizar(); // Carregar uma nova questão após a resposta
+
 }
 
 buttonRespostaA.onclick = function () {

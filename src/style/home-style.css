@@ -42,11 +42,11 @@ button{
     height: 10dvh;
     background-color: var(--amarelo);
     border: solid 4px black;
+    transition: transform 0.3s ease-in-out;
 }
 
 button:hover{
     transform:scale(1.05);
-    transition: transform 0.3s ease-in-out;
     box-shadow: 4px 4px 0px 4px black;
     cursor: pointer;
 }
