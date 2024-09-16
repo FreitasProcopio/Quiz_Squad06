@@ -5,6 +5,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 1s;
 }
 
 .container{
