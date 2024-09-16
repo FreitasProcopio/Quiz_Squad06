@@ -25,7 +25,7 @@ body{
     border-bottom: solid 6px black;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     gap: 20px;
     text-align: center;
@@ -33,16 +33,17 @@ body{
 
 .container-home > h1{
     color: white;
-    font-size: 60px;
+    font-size: 4rem;
 }
 
 /* Consertar a medida do botão */
 button{
-    width: 20dvw;
-    height: 10dvh;
+    width: 20rem;
+    height: 3.5rem;
     background-color: var(--amarelo);
     border: solid 4px black;
     transition: transform 0.3s ease-in-out;
+    font-size: 1.5rem;
 }
 
 button:hover{
@@ -62,4 +63,71 @@ button:hover{
     }
 }
 
+.jogador{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input{
+    display: inline-block;
+    height: 3rem;
+    width: 15rem;
+    margin-left: 10px;
+    border: solid 2px black;
+}
+
+.salvar{
+    height: 3rem;
+    width: 3rem;
+    font-size: 1rem;
+    color:black;
+    background-color: var(--amarelo);
+}
+
+.salvar:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 0px 4px black;
+}
+
+@media (max-width: 768px){
+    .container-home{
+        height: auto;
+        padding-bottom: 10px;
+        min-height: 60%;
+    }
+
+    .container-home > h1{
+        font-size: 50px;
+    }
+
+    button{
+        width: auto;
+        height: 3.5rem;
+        background-color: var(--amarelo);
+    }
+
+    .jogador{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .jogador>h1{
+        font-size: 24px;
+    }
+
+    .salvar{
+        height: 2.5rem;
+        width: 7rem;
+        font-size: 1rem;
+    }
+}
   
