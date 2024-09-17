@@ -152,4 +152,8 @@ button:hover{
         height: 60%;
         border: solid 3px black;
     }
+
+    .marcadores{
+        gap: 20px;
+    }
 }
