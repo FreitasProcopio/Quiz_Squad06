@@ -72,6 +72,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 4px;
 }
 
 .container-questao{
@@ -147,4 +148,8 @@ button:hover{
         width: 30%;
     }
 
+    .numero-questao{
+        height: 60%;
+        border: solid 3px black;
+    }
 }
