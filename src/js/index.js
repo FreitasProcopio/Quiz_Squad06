@@ -89,8 +89,8 @@ contadorMaximoDePerguntas.innerHTML = (`/${arrayQuestoes.length}`);
 function randomizar() {
 
   if (questoesJaRespondidas.length === arrayQuestoes.length) {//Caso o usuário já tenha respondidos todas as questões do quiz
-    questoesJaRespondidas = [];//Reseta o questoesJaRespondidas para nenhuma, assim retornando as questões (Espero que não seja necessário, mas estou me protegendo desse problema 🤔). 
     alert("Você finalizou todas as questões do quiz! Parabéns!");//Ninguém vai ver essa mensagem kkkkkkk
+    window.location.href = "./highscore.html";
   }
 
   let numeroQuestao;
@@ -119,7 +119,6 @@ function verificarResposta(respostaEscolhida) {
     randomizar(); // Carregar uma nova questão após a resposta
   } else {
     alert("Resposta incorreta!");
-    window.location.href = "./highscore.html";
   }
 
 }
