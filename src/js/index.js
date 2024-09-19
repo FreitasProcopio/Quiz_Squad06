@@ -6,6 +6,7 @@ let pontos = document.getElementById("pontos");
 let questoesJaRespondidas = [];
 let respostaCorreta;
 let contadorRespostasCorretas = 0;
+let contadorPonts = 0;
 let contadorPerguntasRespondidas = document.getElementById("contadorPerguntasRespondidas");
 let contadorMaximoDePerguntas = document.getElementById("contadorMaximoDePerguntas");
 
@@ -90,7 +91,7 @@ function randomizar() {
 
   if (questoesJaRespondidas.length === arrayQuestoes.length) {//Caso o usuário já tenha respondidos todas as questões do quiz
     alert("Você finalizou todas as questões do quiz! Parabéns!");//Ninguém vai ver essa mensagem kkkkkkk
-    window.location.href = "./end.html";
+    return window.location.href="../../pages/end.html";
   }
 
   let numeroQuestao;
@@ -115,6 +116,9 @@ function verificarResposta(respostaEscolhida) {
   if (respostaEscolhida === respostaCorreta) {
     alert("Resposta correta!");
     pontos.innerHTML = parseInt(pontos.innerHTML)+1; //Soma +1  pontos positivos na pontuação do usuário
+    contadorRespostasCorretas++;
+    contadorPonts = contadorRespostasCorretas;
+    console.log(contadorPonts);
   } else {
     alert('Resposta Incorreta')
     let tentativa = 0;
