@@ -5,6 +5,7 @@ let buttonRespostaB = document.getElementById("buttonRespB");
 let pontos = document.getElementById("pontos");
 let questoesJaRespondidas = [];
 let respostaCorreta;
+let tentativas=0;
 let contadorRespostasCorretas = 0;
 let contadorPerguntasRespondidas = document.getElementById("contadorPerguntasRespondidas");
 let contadorMaximoDePerguntas = document.getElementById("contadorMaximoDePerguntas");
@@ -116,11 +117,14 @@ function verificarResposta(respostaEscolhida) {
     alert("Resposta correta!");
     pontos.innerHTML = parseInt(pontos.innerHTML)+1; //Soma +1  pontos positivos na pontuação do usuário
     contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML)+1;
-    randomizar(); // Carregar uma nova questão após a resposta
-  } else {
-    alert("Resposta incorreta!");
-  }
 
+  } else {
+    while (tentativas >= 3) {
+      tentativas++;
+      alert("Resposta incorreta!");
+    }
+  }
+  randomizar(); // Carregar uma nova questão após a resposta
 }
 
 buttonRespostaA.onclick = function () {
