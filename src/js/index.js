@@ -5,7 +5,6 @@ let buttonRespostaB = document.getElementById("buttonRespB");
 let pontos = document.getElementById("pontos");
 let questoesJaRespondidas = [];
 let respostaCorreta;
-let avaliacao = 0;
 let contadorRespostasCorretas = 0;
 let contadorPerguntasRespondidas = document.getElementById("contadorPerguntasRespondidas");
 let contadorMaximoDePerguntas = document.getElementById("contadorMaximoDePerguntas");
@@ -89,9 +88,9 @@ contadorMaximoDePerguntas.innerHTML = (`/${arrayQuestoes.length}`);
 
 function randomizar() {
 
-  if (questoesJaRespondidas.length === arrayQuestoes.length) { //Caso o usuário já tenha respondidos todas as questões do quiz
-    alert("Você finalizou todas as questões do quiz! Parabéns!"); //Ninguém vai ver essa mensagem kkkkkkk
-    window.location.href = "./highscore.html";
+  if (questoesJaRespondidas.length === arrayQuestoes.length) {//Caso o usuário já tenha respondidos todas as questões do quiz
+    alert("Você finalizou todas as questões do quiz! Parabéns!");//Ninguém vai ver essa mensagem kkkkkkk
+    window.location.href = "./end.html";
   }
 
   let numeroQuestao;
@@ -115,14 +114,15 @@ function randomizar() {
 function verificarResposta(respostaEscolhida) {
   if (respostaEscolhida === respostaCorreta) {
     alert("Resposta correta!");
-    let avaliacao = pontos.innerHTML = parseInt(pontos.innerHTML)+1; //Soma +1  pontos positivos na pontuação do usuário
-    contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML)+1;
+    pontos.innerHTML = parseInt(pontos.innerHTML)+1; //Soma +1  pontos positivos na pontuação do usuário
   } else {
-    while (tentativas >= 3) {
-      tentativas++;
-      alert("Resposta incorreta!");
+    alert('Resposta Incorreta')
+    let tentativa = 0;
+    while(tentativa < 3){
+      tentativa++
     }
   }
+  contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML)+1;
   randomizar(); // Carregar uma nova questão após a resposta
 }
 
