@@ -28,3 +28,167 @@
     }
   }
 
+  /* ////////////////////////////////////////////////////////////////////////////// */
+
+  .cloud>img{
+    width: 100%;
+    height: 100%;
+  } 
+
+  .star>img{
+    width: 100%;
+    height: 100%;
+  }
+
+
+/* ANIMAÇÕES */
+@keyframes vir {
+  from{
+    right: -10%;
+  }
+}
+
+@keyframes vir2 {
+  from{
+    left: -10%;
+  }
+}
+
+@keyframes pulsar {
+  0% {
+      transform: scale(1);
+  }
+  10%, 20% {
+      transform: scale(0.9);
+  }
+  30%, 50%, 70%, 90% {
+      transform: scale(1.1);
+  }
+  40%, 60%, 80% {
+      transform: scale(1.0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  15%{
+    opacity: 0,15;
+  }
+  30%{
+    opacity: 0,30;
+  }
+  45%{
+    opacity: 0,45;
+  }
+  60%{
+    opacity: 0,60;
+  }
+  75%{
+    opacity: 0,75;
+  }
+  90%{
+    opacity: 0,90;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes descer{
+  from{
+    top:0;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 80% {
+    transform: translateX(10px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(0);
+  }
+}
+
+/* ELEMENTOS */
+.cloud{
+  position: absolute;
+  z-index: 1;
+  width: 8rem;
+  height: 8rem;
+}
+
+.cloud1{
+  top: 70%;
+  right: 10%;
+  animation: vir 2s ease-in, shake 1s ease-in-out infinite;
+}
+
+.cloud2{
+  top: 10%;
+  left: 10%;
+  animation: vir2 2s ease-in, shake 1.5s ease-in-out infinite;
+}
+
+.star{
+  position: absolute;
+  z-index: 1;
+  animation: pulsar 2s infinite alternate, descer 2s linear, appear 2s linear;
+  width: 4rem;
+  height: 4rem;
+}
+
+.star2{
+  left: 18%;
+  top: 85%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.star1{
+  top: 15%;
+  right: 18%;
+  width: 4rem;
+  height: 4rem;
+}
+
+
+/* MEDIA QUERRIES */
+@media (max-width:768px){
+  .star{
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .cloud{
+    width: 22%;
+    height: 14%;
+  }
+
+  .cloud1{
+    top: 86%;
+    right: 10%;
+  }
+
+  .cloud2{
+    top: 2%;
+    left: 10%;
+  }
+
+  .star2{
+    left: 18%;
+    top: 86%;
+  }
+
+  .star1{
+    top: 4%;
+    right: 18%;
+  }
+}
