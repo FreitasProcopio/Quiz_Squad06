@@ -138,19 +138,20 @@ function contador() {
   const contadorPonts = contadorRespostasCorretas;  
   localStorage.setItem('Contador', contadorPonts);
 
-  contadorDois();
+  adicionarAoHistorico(contadorPonts);
 
 }
 
-// function contadorDois() {
-//   const contadorDois = localStorage.getItem('Contador');
-
-//   if (contadorDois >= 1){
-//     localStorage.setItem('Contador2', contadorPonts);
-//   } else {
-//     alert("ainda não");
-//   }
-// }
+function adicionarAoHistorico(contadorPonts) {
+  // Recupera o histórico do localStorage, ou cria um novo array se não existir
+  let historico = JSON.parse(localStorage.getItem('historico')) || [];
+  
+  // Adiciona o valor atual ao histórico
+  historico.push(contadorPonts);
+  
+  // Armazena o histórico atualizado no localStorage
+  localStorage.setItem('historico', JSON.stringify(historico));
+}
 
 buttonRespostaA.onclick = function () {
   verificarResposta("A");
