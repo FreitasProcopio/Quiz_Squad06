@@ -67,3 +67,8 @@ button:hover{
     cursor: pointer;
     box-shadow: 4px 4px 0px 4px black;
 }
+
+.pontos > span {
+    color:black;
+    font-size: 40px;
+}
