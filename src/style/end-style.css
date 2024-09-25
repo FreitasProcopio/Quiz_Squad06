@@ -5,7 +5,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 1s;
 }
 
 .container{
@@ -20,17 +19,35 @@ body{
     gap: 20px;
 }
 
-.container>h1{
-    font-size: 60px;
+.texto-end{
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.texto-end>h1{
+    font-size: 4rem;
+}
+
+.botoes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .btn{
-    width: 700px;
-    height: 70px;
+    width: 40rem;
+    height: 4rem;
     background-color: var(--azul);
     border-radius: 15px;
     margin: 10px;
-    font-size: 20px;
+    font-size: 1.8rem;
 }
 
 .inicio{
