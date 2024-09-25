@@ -124,7 +124,7 @@ function verificarResposta(respostaEscolhida) {
     alert('Resposta Incorreta')
     let tentativa = 0;
     while(tentativa < 3){
-      tentativa++
+      tentativa++;
     }
   }
   
@@ -142,6 +142,8 @@ function contador() {
 
 }
 
+// Armazena o histórico de pontuação, então ele cria um array com o score final de cada modo de jogo
+
 function adicionarAoHistorico(contadorPonts) {
   // Recupera o histórico do localStorage, ou cria um novo array se não existir
   let historico = JSON.parse(localStorage.getItem('historico')) || [];
@@ -151,6 +153,11 @@ function adicionarAoHistorico(contadorPonts) {
   
   // Armazena o histórico atualizado no localStorage
   localStorage.setItem('historico', JSON.stringify(historico));
+
+  // Pega o último valor do array e imprimir
+  let ultimo = historico[historico.length - 1];
+
+  localStorage.setItem('Valor', ultimo);
 }
 
 buttonRespostaA.onclick = function () {
