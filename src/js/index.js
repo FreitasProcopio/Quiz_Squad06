@@ -149,6 +149,7 @@ function contador() {
 
 }
 
+// Teste
 // Armazena o histórico de pontuação, então ele cria um array com o score final de cada modo de jogo
 
 function adicionarAoHistorico(contadorPonts) {
