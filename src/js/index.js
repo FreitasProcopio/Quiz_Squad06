@@ -9,7 +9,8 @@ let contadorRespostasCorretas = 0;
 let contadorPonts;
 let contadorPerguntasRespondidas = document.getElementById("contadorPerguntasRespondidas");
 let contadorMaximoDePerguntas = document.getElementById("contadorMaximoDePerguntas");
-
+let tentativaInicio = 0;
+let tentativaMax = 3;
 
 
 
@@ -121,10 +122,16 @@ function verificarResposta(respostaEscolhida) {
     contador();
   
   } else {
-    alert('Resposta Incorreta')
-    let tentativa = 0;
-    while(tentativa < 3){
-      tentativa++;
+    do{
+      alert('Resposta Incorreta');
+      tentativaInicio++
+      alert(`Você tem: ${tentativaMax - tentativaInicio} restante tentativas`)
+      break;
+    }while(tentativaInicio < 3);
+
+    if(tentativaInicio >= tentativaMax){
+      alert('Game Over \u{1F972}')
+      window.location.href="../../Quiz_Squad06/pages/highscore.html";
     }
   }
   
