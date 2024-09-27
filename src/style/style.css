@@ -21,12 +21,16 @@
     --verde: #43b047;
   }
 
-  @media (max-width: 768px){
-    .container{
-        width: 90%;
-        /* height: 80%; */
-    }
+  /* COMEÇO CONTAINER PRINCIPAL- BRANCO */
+  .container{
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    border: solid 6px black;
+    display: flex;
+    align-items: center;
   }
+  /* FIM CONTAINER PRINCIPAL- BRANCO */
 
   /* ////////////////////////////////////////////////////////////////////////////// */
 
@@ -162,6 +166,14 @@
 
 /* MEDIA QUERRIES */
 @media (max-width:768px){
+  /* COMEÇO CONTAINER PRINCIPAL- BRANCO */
+  .container{
+    width: 90%;
+    height: 85%;
+  }
+  /* FIM CONTAINER PRINCIPAL- BRANCO */
+
+  /* COMEÇO ANIMAÇÕES */
   .star{
     width: 3.5rem;
     height: 3.5rem;
@@ -191,13 +203,52 @@
     top: 4%;
     right: 18%;
   }
+  /* FIM ANIMAÇÕES */
 
-  /* Media página END */
+  /* MEDIA PÁGINA INDEX - COMEÇO */
+  .container-home{
+    height: auto;
+    padding-bottom: 10px;
+    min-height: 60%;
+  }
+
+  .container-home > h1{
+      font-size: 50px;
+  }
+
+  .btn{
+      width: auto;
+      height: 3.5rem;
+      background-color: var(--amarelo);
+  }
+
+  .jogador{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .jogador>h1{
+    font-size: 24px;
+  }
+
+  .salvar{
+    height: 2.5rem;
+    width: 7rem;
+    font-size: 1rem;
+  }
+/* MEDIA PÁGINA INDEX - FIM */
+
+
+  /* MEDIA PÁGINA END - COMEÇO */
   .texto-end>h1{
     font-size: 2.2rem;
   }
 
-  .btn{
+  .btn-end{
       width: 18rem;
   }
+  /* MEDIA PÁGINA END - FIM */
 }

@@ -8,13 +8,18 @@ body{
     transition: all 1s;
 }
 
-.container{
+/* .container{
     width: 60%;
     height: 80%;
     background-color: white;
     border: solid 6px black;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+.highscore{
     justify-content: center;
     flex-direction: column;
 }

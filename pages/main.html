@@ -11,32 +11,32 @@
     <title>QUIZ</title>
 </head>
 <body onload = "randomizarQuestao()">
-    <div class="container">
-        <div class="marcadores">
+    <div class="container main"><!--CONTAINER BRANCO-->
+        <div class="marcadores"><!--CONTAINER MARCADORES = PERSONAGEM, PONTUAÇÃO, NÚMERO DE PERGUNTAS-->
             <div class="personagem">
-                <img src="../src/assets/img/personagem1.png" alt="Personagem">
+                <img src="../src/assets/img/personagem1.png" alt="Personagem"><!--IMAGEM PERSONAGEM-->
             </div>
             <div class="questao-pontuacao">
                 <div class="pontuacao">
-                    <h1>Pontos:<span class="pontos" id="pontos">0</span></h1>
+                    <h1>Pontos:<span class="pontos" id="pontos">0</span></h1><!--MOSTRADOR PONTUAÇÃO-->
                 </div>
                 <div class="numero-questao">
-                    <h1 class="questoes"><span id="contadorPerguntasRespondidas">1</span><span id="contadorMaximoDePerguntas">/6</span></h1>
+                    <h1 class="questoes"><span id="contadorPerguntasRespondidas">1</span><span id="contadorMaximoDePerguntas">/6</span></h1><!--CONTADOR DE QUESTÕES-->
                 </div>
             </div>
         </div>
         <div class="cronometro">
-            <span id="timer"></span>
+            <span id="timer"></span><!--CRONOMETRO - ADICIONAR O CRONOMETRO COM JAVASCRIPT-->
         </div>
         <div class="container-questao">
-            <h1 id="tituloQuestao"></h1>
-            <ul>
+            <h1 id="tituloQuestao"></h1><!--TITULO DA QUESTÃO-->
+            <ul><!--ALTERNATIVAS-->
                 <li><button id="buttonRespA" class="botaoResposta">Resposta A</button></li>
                 <li><button id="buttonRespB" class="botaoResposta">Resposta B</button></li>
                 <li><button id="buttonRespC" class="botaoResposta">Resposta C</button> </li>
             </ul>
         </div>
     </div>
-    <script src="../src/js/index.js"></script>
+    <script src="../src/js/index.js"></script><!--ADICIONANDO JAVASCRIPT-->
 </body>
 </html>

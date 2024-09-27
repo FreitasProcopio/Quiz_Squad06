@@ -8,13 +8,18 @@ body{
     transition: all 1s;
 }
 
-.container{
+/* ESTILO CONTAINERS - COMEÇO */
+/* .container{
     width: 60%;
     height: 80%;
     background-color: white;
     border: solid 6px black;
     display: flex;
     align-items: center;
+    justify-content: center;
+} */
+
+.index1{
     justify-content: center;
 }
 
@@ -36,9 +41,10 @@ body{
     color: white;
     font-size: 4rem;
 }
+/* ESTILO CONTAINERS - FIM */
 
-/* Consertar a medida do botão */
-button{
+/* ESTILO BOTÕES - COMEÇO */
+.btn{
     width: 20rem;
     height: 3.5rem;
     background-color: var(--amarelo);
@@ -47,7 +53,7 @@ button{
     font-size: 1.5rem;
 }
 
-button:hover{
+.btn:hover{
     transform:scale(1.05);
     box-shadow: 4px 4px 0px 4px black;
     cursor: pointer;
@@ -56,14 +62,22 @@ button:hover{
 .link{
     color: black;
 }
-/* Trabalhar melhor a responsividade */
 
-@media (max-width: 768px){
-    .container-home{
-        height: 80%;
-    }
+.salvar{
+    height: 3rem;
+    width: 3rem;
+    font-size: 1rem;
+    color:black;
+    background-color: var(--amarelo);
 }
 
+.salvar:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 0px 4px black;
+}
+/* ESTILO BOTÕES - FIM */
+
+/* ESTILO INPUT JOGADOR - COMEÇO */
 .jogador{
     width: 100%;
     height: auto;
@@ -82,53 +96,5 @@ input{
     margin-left: 10px;
     border: solid 2px black;
 }
-
-.salvar{
-    height: 3rem;
-    width: 3rem;
-    font-size: 1rem;
-    color:black;
-    background-color: var(--amarelo);
-}
-
-.salvar:hover{
-    cursor: pointer;
-    box-shadow: 2px 2px 0px 4px black;
-}
-
-@media (max-width: 768px){
-    .container-home{
-        height: auto;
-        padding-bottom: 10px;
-        min-height: 60%;
-    }
-
-    .container-home > h1{
-        font-size: 50px;
-    }
-
-    button{
-        width: auto;
-        height: 3.5rem;
-        background-color: var(--amarelo);
-    }
-
-    .jogador{
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .jogador>h1{
-        font-size: 24px;
-    }
-
-    .salvar{
-        height: 2.5rem;
-        width: 7rem;
-        font-size: 1rem;
-    }
-}
+/* ESTILO INPUT JOGADOR - FIM */
   
