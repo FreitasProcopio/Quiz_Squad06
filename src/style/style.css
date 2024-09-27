@@ -216,7 +216,7 @@
       font-size: 50px;
   }
 
-  .btn{
+  .btn-index{
       width: auto;
       height: 3.5rem;
       background-color: var(--amarelo);
@@ -241,13 +241,62 @@
   }
 /* MEDIA PÁGINA INDEX - FIM */
 
+/* MEDIA PÁGINA MAIN - COMEÇO */
+.botaoResposta{
+  min-width: 18rem;
+  width:auto;
+  height: 3.5rem;
+}
+
+.container{
+  min-height: 90%;
+  flex-grow: 1;
+}
+
+.container-questao{
+  flex-grow: 1;
+}
+
+.cronometro{
+  height: 0.1rem;
+}
+
+#tituloQuestao{
+  font-size: 30px;
+}
+
+.botaoResposta{
+  font-size: 18px;
+}
+
+.questao-pontuacao{
+  width:70%;
+}
+
+.pontuacao, .numero-questao{
+  font-size: 10px;
+}
+
+.personagem{
+  width: 30%;
+}
+
+.numero-questao{
+  height: 60%;
+  border: solid 3px black;
+}
+
+.marcadores{
+  gap: 20px;
+}
+/* MEDIA PÁGINA MAIN - FIM */
 
   /* MEDIA PÁGINA END - COMEÇO */
   .texto-end>h1{
     font-size: 2.2rem;
   }
 
-  .btn-end{
+  .btn-end, .btn-podio{
       width: 18rem;
   }
   /* MEDIA PÁGINA END - FIM */

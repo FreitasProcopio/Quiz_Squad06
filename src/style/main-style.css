@@ -101,6 +101,7 @@ body{
     border-radius: 15px;
     margin: 10px;
     font-size: 20px;
+    box-shadow: 4px 4px 0px 4px black;
 }
 
 ul{
@@ -108,57 +109,7 @@ ul{
 }
 
 button:hover{
+    box-shadow: 2px 2px 0px 2px black;
     cursor: pointer;
-    box-shadow: 4px 4px 0px 4px black;
-}
-
-
-@media(max-width: 768px){
-    .botaoResposta{
-        min-width: 18rem;
-        width:auto;
-        height: 3.5rem;
-    }
-
-    .container{
-        min-height: 90%;
-        flex-grow: 1;
-    }
-
-    .container-questao{
-        flex-grow: 1;
-    }
-
-    .cronometro{
-        height: 0.1rem;
-    }
-
-    #tituloQuestao{
-        font-size: 30px;
-    }
-
-    .botaoResposta{
-        font-size: 18px;
-    }
-
-    .questao-pontuacao{
-        width:70%;
-    }
-
-    .pontuacao, .numero-questao{
-        font-size: 10px;
-    }
-
-    .personagem{
-        width: 30%;
-    }
-
-    .numero-questao{
-        height: 60%;
-        border: solid 3px black;
-    }
-
-    .marcadores{
-        gap: 20px;
-    }
+    transform:scale(0.99);
 }

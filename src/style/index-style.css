@@ -44,18 +44,19 @@ body{
 /* ESTILO CONTAINERS - FIM */
 
 /* ESTILO BOTÕES - COMEÇO */
-.btn{
+.btn-index{
     width: 20rem;
     height: 3.5rem;
     background-color: var(--amarelo);
     border: solid 4px black;
     transition: transform 0.3s ease-in-out;
     font-size: 1.5rem;
+    box-shadow: 4px 4px 0px 4px black;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-    box-shadow: 4px 4px 0px 4px black;
+.btn-index:hover{
+    transform:scale(0.99);
+    box-shadow: 2px 2px 0px 2px black;
     cursor: pointer;
 }
 
@@ -69,11 +70,13 @@ body{
     font-size: 1rem;
     color:black;
     background-color: var(--amarelo);
+    box-shadow: 2px 2px 0px 2px black;
 }
 
 .salvar:hover{
     cursor: pointer;
-    box-shadow: 2px 2px 0px 4px black;
+    transform:scale(0.99);
+    box-shadow: 1.3px 1.3px 0px 1.3px black;
 }
 /* ESTILO BOTÕES - FIM */
 

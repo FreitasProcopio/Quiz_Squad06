@@ -47,7 +47,7 @@ body{
     flex-direction: column;
 }
 
-.btn-end{
+.btn-end, .btn-podio{
     width: 40rem;
     height: 4rem;
     background-color: var(--azul);
@@ -60,14 +60,27 @@ body{
     color:black;
 }
 
-.btn-end:hover{
+/* .btn-end:hover{
     cursor: pointer;
     box-shadow: 4px 4px 0px 4px black;
     transform:scale(1.05);
-}
+} */
 
-.podio{
+.btn-podio, .btn-end{
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 4px 4px 0px 4px black;
+}
+
+.btn-podio:hover{
+    box-shadow: 2px 2px 0px 2px black;
+    cursor: pointer;
+    transform:scale(0.99);
+}
+
+.btn-end:hover{
+    box-shadow: 2px 2px 0px 2px black;
+    cursor: pointer;
+    transform:scale(0.99);
 }
