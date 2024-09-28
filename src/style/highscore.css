@@ -29,6 +29,11 @@ body{
     font-size: 60px;
 }
 
+.medalha{
+    width: 64px;
+    height: 64px;
+}
+
 .container-posicoes{
     width: 100%;
     align-items: center;
@@ -39,10 +44,6 @@ body{
     padding-left: 20px;
     padding-right: 20px;
     gap: 20px;
-}
-
-.texto>p{
-    font-size: 40px;
 }
 
 
