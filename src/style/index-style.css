@@ -8,20 +8,11 @@ body{
     transition: all 1s;
 }
 
-/* ESTILO CONTAINERS - COMEÇO */
-/* .container{
-    width: 60%;
-    height: 80%;
-    background-color: white;
-    border: solid 6px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
+/* AJUSTES CONTAINER PRINCIPAL */
 .index1{
     justify-content: center;
 }
+/* AJUSTES CONTAINER PRINCIPAL */
 
 .container-home{
     width: 100%;

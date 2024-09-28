@@ -13,6 +13,7 @@
     font-style: normal;
   }
 
+  /* DECLARAÇÃO DAS VARIAVEIS  - COMEÇO*/
   :root{
     --vermelho: #f90423;
     --azul: #01aaec;
@@ -20,6 +21,7 @@
     --dourado: #c49c0c;
     --verde: #43b047;
   }
+  /* DECLARAÇÃO DAS VARIAVEIS  - FIM*/
 
   /* COMEÇO CONTAINER PRINCIPAL- BRANCO */
   .container{
@@ -32,8 +34,8 @@
   }
   /* FIM CONTAINER PRINCIPAL- BRANCO */
 
-  /* ////////////////////////////////////////////////////////////////////////////// */
-
+  
+  /* DEFINIÇÃO DE TAMANHO DE IMAGENS NAS ANIMAÇÕES - COMEÇO */
   .cloud>img{
     width: 100%;
     height: 100%;
@@ -43,9 +45,10 @@
     width: 100%;
     height: 100%;
   }
+  /* DEFINIÇÃO DE TAMANHO DE IMAGENS NAS ANIMAÇÕES - FIM */
 
 
-/* ANIMAÇÕES */
+/* ANIMAÇÕES - COMEÇO*/
 @keyframes vir {
   from{
     right: -10%;
@@ -120,8 +123,9 @@
     transform: translateX(0);
   }
 }
+/* AINIMAÇÕES - FOM */
 
-/* ELEMENTOS */
+/* ELEMENTOS DA ANIMAÇÃO - COMEÇO*/
 .cloud{
   position: absolute;
   z-index: 1;
@@ -162,6 +166,7 @@
   width: 4rem;
   height: 4rem;
 }
+/* ELEMENTOS DA ANIMAÇÃO - COMEÇO*/
 
 
 /* MEDIA QUERRIES */
@@ -242,56 +247,56 @@
 /* MEDIA PÁGINA INDEX - FIM */
 
 /* MEDIA PÁGINA MAIN - COMEÇO */
-.botaoResposta{
-  min-width: 18rem;
-  width:auto;
-  height: 3.5rem;
-}
+  .botaoResposta{
+    min-width: 18rem;
+    width:auto;
+    height: 3.5rem;
+  }
 
-.container{
-  min-height: 90%;
-  flex-grow: 1;
-}
+  .container{
+    min-height: 90%;
+    flex-grow: 1;
+  }
 
-.container-questao{
-  flex-grow: 1;
-}
+  .container-questao{
+    flex-grow: 1;
+  }
 
-.cronometro{
-  height: 0.1rem;
-}
+  .cronometro{
+    height: 0.1rem;
+  }
 
-#tituloQuestao{
-  font-size: 30px;
-}
+  #tituloQuestao{
+    font-size: 30px;
+  }
 
-.botaoResposta{
-  font-size: 18px;
-}
+  .botaoResposta{
+    font-size: 18px;
+  }
 
-.questao-pontuacao{
-  width:70%;
-}
+  .questao-pontuacao{
+    width:70%;
+  }
 
-.pontuacao, .numero-questao{
-  font-size: 10px;
-}
+  .pontuacao, .numero-questao{
+    font-size: 10px;
+  }
 
-.personagem{
-  width: 30%;
-}
+  .personagem{
+    width: 30%;
+  }
 
-.numero-questao{
-  height: 60%;
-  border: solid 3px black;
-}
+  .numero-questao{
+    height: 60%;
+    border: solid 3px black;
+  }
 
-.marcadores{
-  gap: 20px;
-}
+  .marcadores{
+    gap: 20px;
+  }
 /* MEDIA PÁGINA MAIN - FIM */
 
-  /* MEDIA PÁGINA END - COMEÇO */
+/* MEDIA PÁGINA END - COMEÇO */
   .texto-end>h1{
     font-size: 2.2rem;
   }

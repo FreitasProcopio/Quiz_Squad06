@@ -7,23 +7,13 @@ body{
     justify-content: center;
 }
 
-/* .container{
-    width: 60%;
-    height: 80%;
-    background-color: white;
-    border: solid 6px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-} */
-
+/* AJUSTES CONTAINER PRINCIPAL */
 .end{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
 }
+/* AJUSTES CONTAINER PRINCIPAL */
 
 .texto-end{
     width: 100%;
@@ -60,11 +50,6 @@ body{
     color:black;
 }
 
-/* .btn-end:hover{
-    cursor: pointer;
-    box-shadow: 4px 4px 0px 4px black;
-    transform:scale(1.05);
-} */
 
 .btn-podio, .btn-end{
     display: flex;

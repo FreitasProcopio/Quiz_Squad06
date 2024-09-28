@@ -8,21 +8,12 @@ body{
     transition: all 1s;
 }
 
-/* .container{
-    width: 60%;
-    height: 80%;
-    background-color: white;
-    border: solid 6px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
-
+/* AJUSTES CONTAINER PRINCIPAL */
 .highscore{
     justify-content: center;
     flex-direction: column;
 }
+/* AJUSTES CONTAINER PRINCIPAL */
 
 .texto{
     width: 100%;
