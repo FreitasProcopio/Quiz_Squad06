@@ -3,4 +3,4 @@ const valor = localStorage.getItem('Valor');
 
 document.getElementById('pontos1').textContent = pontos;
 document.getElementById('pontos2').textContent = valor;
-document.getElementById('pontos3').textContent = pontos;
+// document.getElementById('pontos3').textContent = pontos;

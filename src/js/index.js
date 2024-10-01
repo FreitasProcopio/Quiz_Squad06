@@ -92,7 +92,7 @@ function randomizar() {
 
   if (questoesJaRespondidas.length === arrayQuestoes.length) {//Caso o usuário já tenha respondidos todas as questões do quiz
     alert("Você finalizou todas as questões do quiz! Parabéns!");//Ninguém vai ver essa mensagem kkkkkkk
-    return window.location.href="../../Quiz_Squad06/pages/highscore.html";
+    return window.location.href="../../pages/highscore.html";
   }
 
   let numeroQuestao;
@@ -120,19 +120,9 @@ function verificarResposta(respostaEscolhida) {
     pontos.innerHTML = parseInt(pontos.innerHTML)+1; //Soma +1  pontos positivos na pontuação do usuário
     contadorRespostasCorretas++;
     contador();
-  
   } else {
-    do{
-      alert('Resposta Incorreta');
-      tentativaInicio++
-      alert(`Você tem: ${tentativaMax - tentativaInicio} restante tentativas`)
-      break;
-    }while(tentativaInicio < 3);
-
-    if(tentativaInicio >= tentativaMax){
-      alert('Game Over \u{1F972}')
-      window.location.href="../../Quiz_Squad06/pages/highscore.html";
-    }
+    alert('Game Over \u{1F972}')
+    window.location.href="../../pages/highscore.html"; 
   }
   
   contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML)+1;
