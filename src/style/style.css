@@ -32,6 +32,10 @@
     display: flex;
     align-items: center;
   }
+
+  button{
+    border: solid 4px black;
+  }
   /* FIM CONTAINER PRINCIPAL- BRANCO */
 
   
