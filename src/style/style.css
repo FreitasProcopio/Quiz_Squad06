@@ -305,4 +305,10 @@
       width: 18rem;
   }
   /* MEDIA PÁGINA END - FIM */
+
+  /* MEDIA PÁGINA HIGHSCORE - COMEÇO */
+  .index{
+    width: 18rem;
+  }
+  /* MEDIA PÁGINA HIGHSCORE - FIM */
 }
