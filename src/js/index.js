@@ -158,6 +158,13 @@ function adicionarAoHistorico(contadorPonts) {
   localStorage.setItem('Valor', ultimo);
 }
 
+function name_game(){ // Função que armazena o nome do usuário passado no início antes de começar o jogo
+
+  let Nomes = document.getElementById("usuario").value;
+
+  localStorage.setItem('Jogador', Nomes+' -');
+
+}
 buttonRespostaA.onclick = function () {
   verificarResposta("A");
 };
