@@ -13,9 +13,6 @@ let tentativaInicio = 0;
 let tentativaMax = 3;
 
 
-
-
-
 const arrayQuestoes = [
   {
     titulo: "Quem descobriu o Brasil?",
