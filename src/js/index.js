@@ -14,6 +14,8 @@ let tentativaMax = 3;
 
 
 
+
+
 const arrayQuestoes = [
   {
     titulo: "Quem descobriu o Brasil?",
@@ -139,10 +141,13 @@ function contador() {
 
 }
 
-// Teste
+function pontosUsuarios(){
+}
+
 // Armazena o histórico de pontuação, então ele cria um array com o score final de cada modo de jogo
 
 function adicionarAoHistorico(contadorPonts) {
+
   // Recupera o histórico do localStorage, ou cria um novo array se não existir
   let historico = JSON.parse(localStorage.getItem('historico')) || [];
   
@@ -156,6 +161,7 @@ function adicionarAoHistorico(contadorPonts) {
   let ultimo = historico[historico.length - 1];
 
   localStorage.setItem('Valor', ultimo);
+
 }
 
 function name_game(){ // Função que armazena o nome do usuário passado no início antes de começar o jogo
