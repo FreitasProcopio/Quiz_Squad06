@@ -12,180 +12,193 @@ let contadorMaximoDePerguntas = document.getElementById("contadorMaximoDePergunt
 let tentativaInicio = 0;
 let tentativaMax = 3;
 
+/*
+Manual do Array
 
+0 = A
+1 = B
+2 = C
 
+EXEMPLO
+    Titulo: "Quem descobriu o Brasil?",
+    
+    0(a) = Pedro Alvares Cabral
+    1(b) = Shaolin Matador de porco
+    2(c) = Meu pai
 
+    Resposta correta = (0)A
+*/
 
 const arrayQuestoes = [
   {
     titulo: "Quem descobriu o Brasil?",
     resposta: ["Pedro Alvares Cabral", "Shaolin Matador de porco", "Meu pai"],
-    correta: "A",
+    correta: 0, // Índice da resposta correta
   },
   {
     titulo: "Qual é a fórmula da água?",
     resposta: ["H2O", "CO2", "O2"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Qual é o maior planeta do sistema solar?",
     resposta: ["Terra", "Júpiter", "Marte"],
-    correta: "B",
+    correta: 1,
   },
   {
     titulo: "Qual é a capital da França?",
     resposta: ["Paris", "Londres", "Berlim"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Quem escreveu 'Dom Quixote'?",
-    resposta: [
-      "Miguel de Cervantes",
-      "William Shakespeare",
-      "Jorge Luis Borges",
-    ],
-    correta: "A",
+    resposta: ["Miguel de Cervantes", "William Shakespeare", "Jorge Luis Borges"],
+    correta: 0,
   },
   {
     titulo: "Qual é o elemento químico com o símbolo 'Au'?",
     resposta: ["Ouro", "Prata", "Cobre"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Em que ano foi lançada a primeira versão do Windows?",
     resposta: ["1985", "1990", "1995"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Qual é o maior oceano do planeta Terra?",
     resposta: ["Oceano Atlântico", "Oceano Índico", "Oceano Pacífico"],
-    correta: "C",
+    correta: 2,
   },
   {
     titulo: "Quem pintou a Mona Lisa?",
     resposta: ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Qual é o planeta mais próximo do Sol?",
     resposta: ["Mercúrio", "Vênus", "Marte"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Qual é o esporte mais popular do mundo?",
     resposta: ["Futebol", "Basquete", "Tênis"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Qual é o maior continente em área?",
     resposta: ["Ásia", "África", "América do Norte"],
-    correta: "A",
+    correta: 0,
   },
   {
     titulo: "Quem foi o primeiro homem a pisar na Lua?",
     resposta: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin"],
-    correta: "A",
+    correta: 0,
   },
-];
+]; 
 
 contadorMaximoDePerguntas.innerHTML = (`/${arrayQuestoes.length}`);
-
 function randomizar() {
-
-  if (questoesJaRespondidas.length === arrayQuestoes.length) {//Caso o usuário já tenha respondidos todas as questões do quiz
-    alert("Você finalizou todas as questões do quiz! Parabéns!");//Ninguém vai ver essa mensagem kkkkkkk
-    return window.location.href="../../pages/highscore.html";
+  if (questoesJaRespondidas.length === arrayQuestoes.length) {
+    alert("Você finalizou todas as questões do quiz! Parabéns!");
+    return window.location.href = "../../pages/highscore.html";
   }
 
   let numeroQuestao;
 
   do {
-    numeroQuestao = Math.floor(Math.random() * arrayQuestoes.length); // Escolher um número aleatório dentro do comprimento do array
-  } while (questoesJaRespondidas.includes(numeroQuestao)); // Garantir que a pergunta não foi respondida
+    numeroQuestao = Math.floor(Math.random() * arrayQuestoes.length);
+  } while (questoesJaRespondidas.includes(numeroQuestao));
 
-  questoesJaRespondidas.push(numeroQuestao); // Adicionar a questão à lista de já respondidas
+  questoesJaRespondidas.push(numeroQuestao);
 
-  let questao = arrayQuestoes[numeroQuestao]; // Escolher a questão aleatoriamente
+  let questao = arrayQuestoes[numeroQuestao];
+  tituloQuestao.innerHTML = questao.titulo;
 
-  tituloQuestao.innerHTML = questao.titulo; // Título da questão no HTML
-  buttonRespostaA.innerHTML = questao.resposta[0]; // Alternativa 1 no HTML
-  buttonRespostaB.innerHTML = questao.resposta[1]; // Alternativa 2 no HTML
-  buttonRespostaC.innerHTML = questao.resposta[2]; // Alternativa 3 no HTML
+  // Obter o índice da resposta correta original
+  const indiceCorreto = questao.correta;
 
-  respostaCorreta = questao.correta; // Resposta da questão
+  // Embaralhar as respostas
+  let respostasEmbaralhadas = questao.resposta.slice();
+  respostasEmbaralhadas.sort(() => Math.random() - 0.5);
+
+  // Atribuir as respostas embaralhadas aos botões
+  buttonRespostaA.innerHTML = respostasEmbaralhadas[0];
+  buttonRespostaB.innerHTML = respostasEmbaralhadas[1];
+  buttonRespostaC.innerHTML = respostasEmbaralhadas[2];
+
+  // Encontrar a nova posição da resposta correta no array embaralhado
+  respostaCorreta = respostasEmbaralhadas.indexOf(questao.resposta[indiceCorreto]);
+
+  console.log("RESPOSTA CORRETA: " + respostaCorreta);
 }
 
-function verificarResposta(respostaEscolhida) {
+function verificarResposta(respostaUsuario, botaoSelecionado) {
+  const indicesRespostas = {
+    "A": 0,
+    "B": 1,
+    "C": 2
+  };
 
-  if (respostaEscolhida === respostaCorreta) {
-    alert("Resposta correta!");
-    pontos.innerHTML = parseInt(pontos.innerHTML)+1; //Soma +1  pontos positivos na pontuação do usuário
+  const indiceSelecionado = indicesRespostas[respostaUsuario];
+
+  if (indiceSelecionado === respostaCorreta) {
+    botaoSelecionado.style.backgroundColor = "green"; 
+    setTimeout(() => {
+      botaoSelecionado.style.backgroundColor = ""; 
+    }, 1000);
+    pontos.innerHTML = parseInt(pontos.innerHTML) + 1;
     contadorRespostasCorretas++;
     contador();
-  } else {
-    alert('Game Over \u{1F972}')
-    window.location.href="../../pages/end.html"; 
-  }
-  
-  contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML)+1;
-  randomizar(); // Carregar uma nova questão após a resposta
 
+    // Verifica se atingiu o limite de pontos
+    if (contadorRespostasCorretas >= 10) {
+      alert("Você venceu! Parabéns!");
+      window.location.href = "../../pages/vitoria.html"; // Redirecionar para a página de vitória
+    }
+  } else {
+    alert("Resposta incorreta! Game Over 😭");
+    window.location.href = "../../pages/end.html"; 
+  }
+
+  contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML) + 1;
+  randomizar();
 }
 
 function contador() {
-
   const contadorPonts = contadorRespostasCorretas;  
   localStorage.setItem('Contador', contadorPonts);
-
   adicionarAoHistorico(contadorPonts);
-
 }
-
-function pontosUsuarios(){
-}
-
-// Armazena o histórico de pontuação, então ele cria um array com o score final de cada modo de jogo
 
 function adicionarAoHistorico(contadorPonts) {
-
-  // Recupera o histórico do localStorage, ou cria um novo array se não existir
   let historico = JSON.parse(localStorage.getItem('historico')) || [];
-  
-  // Adiciona o valor atual ao histórico
   historico.push(contadorPonts);
-  
-  // Armazena o histórico atualizado no localStorage
   localStorage.setItem('historico', JSON.stringify(historico));
-
-  // Pega o último valor do array e imprimir
   let ultimo = historico[historico.length - 1];
-
   localStorage.setItem('Valor', ultimo);
-
 }
 
-function name_game(){ // Função que armazena o nome do usuário passado no início antes de começar o jogo
-
+function name_game() {
   let Nomes = document.getElementById("usuario").value;
-
-  localStorage.setItem('Jogador', Nomes+' -');
-
+  localStorage.setItem('Jogador', Nomes + ' -');
 }
+
 buttonRespostaA.onclick = function () {
-  verificarResposta("A");
+  verificarResposta("A", buttonRespostaA);
 };
 
 buttonRespostaB.onclick = function () {
-  verificarResposta("B");
+  verificarResposta("B", buttonRespostaB);
 };
 
 buttonRespostaC.onclick = function () {
-  verificarResposta("C");
+  verificarResposta("C", buttonRespostaC);
 };
+
 
 // Inicializar com uma questão
 randomizar();
-
 /*
 Necessária uma função para parar o programa quando uma quantidade X de pontoso positivos sejam alcançados, e o mesmo para caso seja pontos negativos.
 
