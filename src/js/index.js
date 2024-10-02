@@ -124,7 +124,7 @@ function verificarResposta(respostaEscolhida) {
     contador();
   } else {
     alert('Game Over \u{1F972}')
-    window.location.href="../../pages/highscore.html"; 
+    window.location.href="../../pages/end.html"; 
   }
   
   contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML)+1;
