@@ -36,7 +36,7 @@ function compararPontuacao() {
         if (usuarios[i].pontuacao > maior.pontuacao) {
             maior = usuarios[i];
         }
-        else if ((usuarios[i].pontuacao < maior.pontuacao && usuarios[i].pontuacao > menor.pontuacao)) {
+        else if (usuarios[i].pontuacao < maior.pontuacao && usuarios[i].pontuacao > menor.pontuacao) {
             meios = usuarios[i];
         }
         else if (usuarios[i].pontuacao < menor.pontuacao) {
