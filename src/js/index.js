@@ -160,7 +160,6 @@ function verificarResposta(respostaUsuario, botaoSelecionado) {
     alert("Resposta incorreta! Game Over 😭");
     window.location.href = "../../Quiz_Squad06/pages/end.html"; 
   }
-  
 
   contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML) + 1;
   randomizar();
@@ -199,6 +198,24 @@ buttonRespostaB.onclick = function () {
 buttonRespostaC.onclick = function () {
   verificarResposta("C", buttonRespostaC);
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  var audio = document.getElementById('backgroundMusic');
+
+  // Carregar a posição do áudio armazenada
+  var lastPosition = localStorage.getItem('audioPosition');
+  if (lastPosition) {
+      audio.currentTime = parseFloat(lastPosition);
+  }
+
+  // Reproduzir o áudio
+  audio.play();
+
+  // Salvar a posição do áudio quando a aba ou página é fechada
+  window.addEventListener('beforeunload', function() {
+      localStorage.setItem('audioPosition', audio.currentTime);
+  });
+});
 
 // Inicializar com uma questão
 randomizar();

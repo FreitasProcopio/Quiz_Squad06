@@ -81,3 +81,7 @@ li h1{
     align-items: center;
     justify-content: center;
 }
+
+.audio {
+    display: none;
+}

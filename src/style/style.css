@@ -51,6 +51,9 @@
   }
   /* DEFINIÇÃO DE TAMANHO DE IMAGENS NAS ANIMAÇÕES - FIM */
 
+.audio {
+  display: none;
+}
 
 /* ANIMAÇÕES - COMEÇO*/
 @keyframes vir {

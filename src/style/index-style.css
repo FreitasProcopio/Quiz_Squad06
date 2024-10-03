@@ -95,3 +95,7 @@ input{
 input .name, #usuario{
     text-align: center;
 }
+
+.audio {
+    display: none;
+}

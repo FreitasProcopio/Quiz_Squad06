@@ -69,3 +69,7 @@ body{
     cursor: pointer;
     transform:scale(0.99);
 }
+
+.audio {
+    display: none;
+}
