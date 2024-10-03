@@ -171,19 +171,9 @@ function contador() {
   adicionarAoHistorico(contadorPonts);
 }
 
-function adicionarAoHistorico(contadorPonts) {
-  let historico = JSON.parse(localStorage.getItem('historico')) || [];
-  historico.push(contadorPonts);
-  localStorage.setItem('historico', JSON.stringify(historico));
-  let ultimo = historico[historico.length - 1];
-  localStorage.setItem('Valor', ultimo);
+function limpar_historico(){
+  localStorage.clear();
 }
-
-function name_game() {
-  let Nomes = document.getElementById("usuario").value;
-  localStorage.setItem('Jogador', Nomes);
-}
-
 buttonRespostaA.onclick = function () {
   verificarResposta("A", buttonRespostaA);
 };
@@ -196,17 +186,5 @@ buttonRespostaC.onclick = function () {
   verificarResposta("C", buttonRespostaC);
 };
 
-
 // Inicializar com uma questão
 randomizar();
-/*
-Necessária uma função para parar o programa quando uma quantidade X de pontoso positivos sejam alcançados, e o mesmo para caso seja pontos negativos.
-
-Gostaria de uma função para randomizar a posição da resposta correta entre os botões.
-
-Sinto que deveriamos ter ao menos 10 questões no minimo
-
-Uma página para caso de vitória, e uma para derrota.
-
-E um button com a função de reiniciar o programa caso o usuário queira
-*/

@@ -51,11 +51,11 @@ function compararPontuacao() {
     };  
 } 
 
-criar_user(nome, pontuacao);
+// criar_user(nome, pontuacao);
 
-// criar_user('Alice', 150);
-// criar_user('Bob', 200);
-// criar_user('Charlie', 100);
+criar_user('Alice', 150);
+criar_user('Bob', 200);
+criar_user('Charlie', 100);
 
 const resultado = compararPontuacao();
 
