@@ -101,7 +101,7 @@ contadorMaximoDePerguntas.innerHTML = (`/${arrayQuestoes.length}`);
 function randomizar() {
   if (questoesJaRespondidas.length === arrayQuestoes.length) {
     alert("Você finalizou todas as questões do quiz! Parabéns!");
-    return window.location.href = "../../pages/highscore.html";
+    return window.location.href = "../../Quiz_Squad06/pages/highscore.html";
   }
 
   let numeroQuestao;
@@ -154,11 +154,11 @@ function verificarResposta(respostaUsuario, botaoSelecionado) {
     // Verifica se atingiu o limite de pontos
     if (contadorRespostasCorretas >= 10) {
       alert("Você venceu! Parabéns!");
-      window.location.href = "../../pages/vitoria.html"; // Redirecionar para a página de vitória
+      window.location.href = "../../Quiz_Squad06/pages/vitoria.html"; // Redirecionar para a página de vitória
     }
   } else {
     alert("Resposta incorreta! Game Over 😭");
-    window.location.href = "../../pages/end.html"; 
+    window.location.href = "../../Quiz_Squad06/pages/end.html"; 
   }
 
   contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML) + 1;

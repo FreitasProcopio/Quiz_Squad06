@@ -1,9 +1,7 @@
 const nome = localStorage.getItem('Jogador');
 const pontos = localStorage.getItem('Contador');
-const valor = localStorage.getItem('Valor');
 
 document.getElementById('pontos1').textContent = pontos;
-document.getElementById('pontos2').textContent = valor;
 document.getElementById('usuarioExibir').textContent = nome;
 
 function criar_user(name, pontuacao){
