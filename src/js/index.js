@@ -171,6 +171,19 @@ function contador() {
   adicionarAoHistorico(contadorPonts);
 }
 
+function adicionarAoHistorico(contadorPonts) {
+  let historico = JSON.parse(localStorage.getItem('historico')) || [];
+  historico.push(contadorPonts);
+  localStorage.setItem('historico', JSON.stringify(historico));
+  let ultimo = historico[historico.length - 1];
+  localStorage.setItem('Valor', ultimo);
+}
+
+function name_game() {
+  let Nomes = document.getElementById("usuario").value;
+  localStorage.setItem('Jogador', Nomes);
+}
+
 function limpar_historico(){
   localStorage.clear();
 }
