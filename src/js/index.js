@@ -143,10 +143,10 @@ function verificarResposta(respostaUsuario, botaoSelecionado) {
   const indiceSelecionado = indicesRespostas[respostaUsuario];
 
   if (indiceSelecionado === respostaCorreta) {
-    botaoSelecionado.style.backgroundColor = "green"; 
+    botaoSelecionado.style.backgroundColor = "goldenrod"; 
     setTimeout(() => {
       botaoSelecionado.style.backgroundColor = ""; 
-    }, 1000);
+    }, 300);
     pontos.innerHTML = parseInt(pontos.innerHTML) + 1;
     contadorRespostasCorretas++;
     contador();
