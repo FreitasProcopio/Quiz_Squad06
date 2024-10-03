@@ -29,29 +29,29 @@ function compararPontuacao() {
     }
 
     let maior = usuarios[0];
+    let meios = usuarios[0];
     let menor = usuarios[0];
-    let meios = null; // Iniciar como null
-
+    
     for (let i = 1; i < usuarios.length; i++) {
         if (usuarios[i].pontuacao > maior.pontuacao) {
-            meios = maior; // Atualiza "meios" antes de mudar "maior"
             maior = usuarios[i];
-        } else if (usuarios[i].pontuacao < menor.pontuacao) {
-            meios = menor; // Atualiza "meios" antes de mudar "menor"
+        }
+        else if (usuarios[i].pontuacao > maior.pontuacao && usuarios[i].pontuacao < menor.pontuacao) {
+            meios = usuarios[i];
+        }
+        else if (usuarios[i].pontuacao < menor.pontuacao) {
             menor = usuarios[i];
-        } else if (usuarios[i].pontuacao > menor.pontuacao && (meios === null || usuarios[i].pontuacao < meios.pontuacao)) {
-            meios = usuarios[i]; // Atualiza "meios" se for uma pontuação intermediária
         }
     }
-
+    
     return {
         maior: maior,
         meios: meios,
         menor: menor
-    };
-}
+    };  
+} 
 
-criar_user(nome, pontos);
+criar_user(nome, pontos)
 
 const resultado = compararPontuacao();
 

@@ -152,7 +152,7 @@ function verificarResposta(respostaUsuario, botaoSelecionado) {
     contador();
 
     // Verifica se atingiu o limite de pontos
-    if (contadorRespostasCorretas >= 10) {
+    if (contadorRespostasCorretas >= 13) {
       alert("Você venceu! Parabéns!");
       window.location.href = "../../Quiz_Squad06/pages/vitoria.html"; // Redirecionar para a página de vitória
     }
