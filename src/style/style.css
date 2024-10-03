@@ -18,7 +18,7 @@
     --vermelho: #f90423;
     --azul: #01aaec;
     --amarelo: #ffcd0f;
-    --dourado: #c49c0c;
+    --roxo: #7A00FF;
     --verde: #43b047;
   }
   /* DECLARAÇÃO DAS VARIAVEIS  - FIM*/
@@ -313,6 +313,10 @@
   /* MEDIA PÁGINA HIGHSCORE - COMEÇO */
   .index{
     width: 18rem;
+  }
+
+  #usuarioExibir, #pontos1, #pontos2, #pontos3{
+    font-size: 1.5rem;
   }
   /* MEDIA PÁGINA HIGHSCORE - FIM */
 }

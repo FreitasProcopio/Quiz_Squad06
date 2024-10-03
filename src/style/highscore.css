@@ -75,3 +75,9 @@ li{
     color: black;
     font-size: 40px;
 }
+
+li h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
