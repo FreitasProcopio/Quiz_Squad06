@@ -36,7 +36,7 @@ function compararPontuacao() {
         if (usuarios[i].pontuacao > maior.pontuacao) {
             maior = usuarios[i];
         }
-        else if (usuarios[i].pontuacao > maior.pontuacao && usuarios[i].pontuacao < menor.pontuacao) {
+        else if ((usuarios[i].pontuacao < maior.pontuacao && usuarios[i].pontuacao > menor.pontuacao)) {
             meios = usuarios[i];
         }
         else if (usuarios[i].pontuacao < menor.pontuacao) {
@@ -51,7 +51,11 @@ function compararPontuacao() {
     };  
 } 
 
-criar_user(nome, pontos)
+criar_user(nome, pontuacao);
+
+// criar_user('Alice', 150);
+// criar_user('Bob', 200);
+// criar_user('Charlie', 100);
 
 const resultado = compararPontuacao();
 
