@@ -92,3 +92,6 @@ input{
 }
 /* ESTILO INPUT JOGADOR - FIM */
   
+input .name, #usuario{
+    text-align: center;
+}
