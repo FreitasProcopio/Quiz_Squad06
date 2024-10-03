@@ -1,0 +1,8 @@
+body{
+    background-color: var(--roxo);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
