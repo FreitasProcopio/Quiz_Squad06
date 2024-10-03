@@ -150,19 +150,19 @@ function verificarResposta(respostaUsuario, botaoSelecionado) {
     pontos.innerHTML = parseInt(pontos.innerHTML) + 1;
     contadorRespostasCorretas++;
     contador();
+  } else {
+    alert("Resposta incorreta! Game Over 😭");
+    window.location.href = "../../Quiz_Squad06/pages/end.html"; 
+  }
 
     // Verifica se atingiu o limite de pontos
     if (contadorRespostasCorretas >= 13) {
       alert("Você venceu! Parabéns!");
       window.location.href = "../../Quiz_Squad06/pages/vitoria.html"; // Redirecionar para a página de vitória
     }
-  } else {
-    alert("Resposta incorreta! Game Over 😭");
-    window.location.href = "../../Quiz_Squad06/pages/end.html"; 
-  }
 
-  contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML) + 1;
-  randomizar();
+
+  
 }
 
 function contador() {
