@@ -141,25 +141,26 @@ function contador() {
 function pontosUsuarios(){
 }
 
+
 // Armazena o histórico de pontuação, então ele cria um array com o score final de cada modo de jogo
+// function adicionarAoHistorico(contadorPonts) {
 
-function adicionarAoHistorico(contadorPonts) {
-
-  // Recupera o histórico do localStorage, ou cria um novo array se não existir
-  let historico = JSON.parse(localStorage.getItem('historico')) || [];
+//   // Recupera o histórico do localStorage, ou cria um novo array se não existir
+//   let historico = JSON.parse(localStorage.getItem('historico')) || [];
   
-  // Adiciona o valor atual ao histórico
-  historico.push(contadorPonts);
+//   // Adiciona o valor atual ao histórico
+//   historico.push(contadorPonts);
   
-  // Armazena o histórico atualizado no localStorage
-  localStorage.setItem('historico', JSON.stringify(historico));
+//   // Armazena o histórico atualizado no localStorage
+//   localStorage.setItem('historico', JSON.stringify(historico));
 
-  // Pega o último valor do array e imprimir
-  let ultimo = historico[historico.length - 1];
+//   // Pega o último valor do array e imprimir
+//   let ultimo = historico[historico.length - 1];
 
-  localStorage.setItem('Valor', ultimo);
+//   localStorage.setItem('Valor', ultimo);
 
-}
+// }
+
 
 function name_game(){ // Função que armazena o nome do usuário passado no início antes de começar o jogo
 

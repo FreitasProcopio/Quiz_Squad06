@@ -26,4 +26,3 @@ function criar_user(name, pontuacao){
 criar_user(nome, pontos);
 
 console.log(usuarios);
-
