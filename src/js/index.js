@@ -181,7 +181,7 @@ function adicionarAoHistorico(contadorPonts) {
 
 function name_game() {
   let Nomes = document.getElementById("usuario").value;
-  localStorage.setItem('Jogador', Nomes + ' -');
+  localStorage.setItem('Jogador', Nomes);
 }
 
 buttonRespostaA.onclick = function () {
