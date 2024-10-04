@@ -160,6 +160,7 @@ function verificarResposta(respostaUsuario, botaoSelecionado) {
     alert("Resposta incorreta! Game Over 😭");
     window.location.href = "../../Quiz_Squad06/pages/end.html"; 
   }
+  
 
   contadorPerguntasRespondidas.innerHTML = parseInt(contadorPerguntasRespondidas.innerHTML) + 1;
   randomizar();
